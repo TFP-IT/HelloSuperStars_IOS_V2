@@ -1,0 +1,90 @@
+import {StyleSheet, Dimensions} from 'react-native';
+const windowHight = Dimensions.get('window').height;
+const windowWidth = Dimensions.get('window').width;
+let halfWidth = windowWidth / 2 - 20;
+const styles = StyleSheet.create({
+  VideoContainer: {
+    width: windowWidth,
+    height: windowHight,
+    position: 'relative',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'black',
+  },
+  TouchAbleViedo: {
+    width: '100%',
+    height: '100%',
+    position: 'absolute',
+  },
+  PushImage: {
+    fontSize: 40,
+    color: 'rgba(255, 255, 255, 0.473)',
+    position: 'absolute',
+    backgroundColor: 'rgba(52,52,52,0.6)',
+    borderRadius: 100,
+    padding: 20,
+  },
+  LeftSideBar: {
+    top: '35%',
+    position: 'absolute',
+    backgroundColor: 'rgba(31, 31, 31, 0.473)',
+    transform: [{translateX: -halfWidth}],
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 15,
+    paddingVertical: 18,
+    borderRadius: 10,
+    paddingLeft: 35,
+  },
+  RightSideBar: {
+    top: '38%',
+    position: 'absolute',
+    backgroundColor: 'rgba(31, 31, 31, 0.473)',
+    transform: [{translateX: halfWidth}],
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    paddingHorizontal: 15,
+    paddingVertical: 18,
+    borderRadius: 10,
+    paddingRight: 35,
+  },
+  CommentSection: {
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    width: '100%',
+    transform: [{translateY: 305}],
+    marginLeft: '0%',
+    // marginBottom: '0%',
+    // transform: [{translateX: 100}],
+    height: 120,
+    position: 'absolute',
+  },
+  CommentInput: {
+    width: windowWidth - 100,
+    backgroundColor: '#EFEFEF',
+    borderRadius: 50,
+    height: 40,
+    color: '#FFAD00',
+    paddingLeft: 15,
+  },
+  UserImage: {
+    width: '100%',
+    top: '85%',
+    position: 'absolute',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+  },
+  SentIcon: {
+    backgroundColor: '#EFEFEF',
+    borderRadius: 50,
+    height: 40,
+    width: 40,
+    paddingRight: 10,
+    justifyContent: 'center',
+    paddingLeft: 10,
+  },
+});
+
+export default styles;
